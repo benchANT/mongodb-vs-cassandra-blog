@@ -1,0 +1,922 @@
+{
+  "changed": true,
+  "msg": "All items completed",
+  "skipped": false,
+  "data_results": [
+    {
+      "ansible_loop_var": "item",
+      "changed": true,
+      "failed": false,
+      "instance_ids": [
+        "i-03bea5ceef964a337"
+      ],
+      "instances": [
+        {
+          "ami_launch_index": 0,
+          "architecture": "x86_64",
+          "block_device_mappings": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "attach_time": "2022-02-28T21:19:39+00:00",
+                "delete_on_termination": true,
+                "status": "attached",
+                "volume_id": "vol-082cc1d3c326f3541"
+              }
+            }
+          ],
+          "capacity_reservation_specification": {
+            "capacity_reservation_preference": "open"
+          },
+          "client_token": "5d78e164ea224a06b6be23f73724901e",
+          "cpu_options": {
+            "core_count": 4,
+            "threads_per_core": 2
+          },
+          "ebs_optimized": false,
+          "ena_support": true,
+          "enclave_options": {
+            "enabled": false
+          },
+          "hibernation_options": {
+            "configured": false
+          },
+          "hypervisor": "xen",
+          "image_id": "ami-05b308c240ae70bb6",
+          "instance_id": "i-03bea5ceef964a337",
+          "instance_type": "i3.2xlarge",
+          "key_name": "baas_dev",
+          "launch_time": "2022-02-28T21:19:38+00:00",
+          "metadata_options": {
+            "http_endpoint": "enabled",
+            "http_protocol_ipv6": "disabled",
+            "http_put_response_hop_limit": 1,
+            "http_tokens": "optional",
+            "instance_metadata_tags": "disabled",
+            "state": "applied"
+          },
+          "monitoring": {
+            "state": "disabled"
+          },
+          "network_interfaces": [
+            {
+              "association": {
+                "ip_owner_id": "amazon",
+                "public_dns_name": "ec2-18-192-127-138.eu-central-1.compute.amazonaws.com",
+                "public_ip": "18.192.127.138"
+              },
+              "attachment": {
+                "attach_time": "2022-02-28T21:19:38+00:00",
+                "attachment_id": "eni-attach-0446bf37a905bc9ea",
+                "delete_on_termination": true,
+                "device_index": 0,
+                "network_card_index": 0,
+                "status": "attached"
+              },
+              "description": "",
+              "groups": [
+                {
+                  "group_id": "sg-3734875b",
+                  "group_name": "default"
+                },
+                {
+                  "group_id": "sg-070a926c34814caba",
+                  "group_name": "baas-dbms"
+                },
+                {
+                  "group_id": "sg-094cb4a4651310ea0",
+                  "group_name": "baas-ssh"
+                }
+              ],
+              "interface_type": "interface",
+              "ipv6_addresses": [],
+              "mac_address": "02:ab:62:ba:2b:00",
+              "network_interface_id": "eni-09d7035a6c4c7bf46",
+              "owner_id": "584241909684",
+              "private_dns_name": "ip-172-31-27-49.eu-central-1.compute.internal",
+              "private_ip_address": "172.31.27.49",
+              "private_ip_addresses": [
+                {
+                  "association": {
+                    "ip_owner_id": "amazon",
+                    "public_dns_name": "ec2-18-192-127-138.eu-central-1.compute.amazonaws.com",
+                    "public_ip": "18.192.127.138"
+                  },
+                  "primary": true,
+                  "private_dns_name": "ip-172-31-27-49.eu-central-1.compute.internal",
+                  "private_ip_address": "172.31.27.49"
+                }
+              ],
+              "source_dest_check": true,
+              "status": "in-use",
+              "subnet_id": "subnet-324f4259",
+              "vpc_id": "vpc-d58ed7be"
+            }
+          ],
+          "placement": {
+            "availability_zone": "eu-central-1a",
+            "group_name": "",
+            "tenancy": "default"
+          },
+          "platform_details": "Linux/UNIX",
+          "private_dns_name": "ip-172-31-27-49.eu-central-1.compute.internal",
+          "private_dns_name_options": {
+            "enable_resource_name_dns_a_record": false,
+            "enable_resource_name_dns_aaaa_record": false,
+            "hostname_type": "ip-name"
+          },
+          "private_ip_address": "172.31.27.49",
+          "product_codes": [],
+          "public_dns_name": "ec2-18-192-127-138.eu-central-1.compute.amazonaws.com",
+          "public_ip_address": "18.192.127.138",
+          "root_device_name": "/dev/sda1",
+          "root_device_type": "ebs",
+          "security_groups": [
+            {
+              "group_id": "sg-3734875b",
+              "group_name": "default"
+            },
+            {
+              "group_id": "sg-070a926c34814caba",
+              "group_name": "baas-dbms"
+            },
+            {
+              "group_id": "sg-094cb4a4651310ea0",
+              "group_name": "baas-ssh"
+            }
+          ],
+          "source_dest_check": true,
+          "state": {
+            "code": 16,
+            "name": "running"
+          },
+          "state_transition_reason": "",
+          "subnet_id": "subnet-324f4259",
+          "tags": {
+            "Name": "BaaS-MONGODB-data-0-137f08ac-06df-56f4-a7fc-61f211768769",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "usage_operation": "RunInstances",
+          "usage_operation_update_time": "2022-02-28T21:19:38+00:00",
+          "virtualization_type": "hvm",
+          "vpc_id": "vpc-d58ed7be"
+        }
+      ],
+      "invocation": {
+        "module_args": {
+          "availability_zone": null,
+          "aws_access_key": "AKIAITUSIIVIIVYRSRRQ",
+          "aws_ca_bundle": null,
+          "aws_config": null,
+          "aws_secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+          "cpu_credit_specification": null,
+          "cpu_options": null,
+          "debug_botocore_endpoint_logs": false,
+          "detailed_monitoring": null,
+          "ebs_optimized": null,
+          "ec2_url": null,
+          "filters": {
+            "image-id": [
+              "ami-05b308c240ae70bb6"
+            ],
+            "instance-state-name": [
+              "pending",
+              "running",
+              "stopping",
+              "stopped"
+            ],
+            "tag:Name": [
+              "BaaS-MONGODB-data-0-137f08ac-06df-56f4-a7fc-61f211768769"
+            ]
+          },
+          "image": null,
+          "image_id": "ami-05b308c240ae70bb6",
+          "instance_ids": [],
+          "instance_initiated_shutdown_behavior": null,
+          "instance_role": null,
+          "instance_type": "i3.2xlarge",
+          "key_name": "baas_dev",
+          "launch_template": null,
+          "metadata_options": null,
+          "name": "BaaS-MONGODB-data-0-137f08ac-06df-56f4-a7fc-61f211768769",
+          "network": {
+            "assign_public_ip": true
+          },
+          "placement_group": null,
+          "profile": null,
+          "purge_tags": false,
+          "region": "eu-central-1",
+          "security_group": null,
+          "security_groups": [
+            "default",
+            "baas-ssh",
+            "baas-dbms"
+          ],
+          "security_token": null,
+          "state": "started",
+          "tags": {
+            "Name": "BaaS-MONGODB-data-0-137f08ac-06df-56f4-a7fc-61f211768769",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "tenancy": null,
+          "termination_protection": null,
+          "tower_callback": null,
+          "user_data": null,
+          "validate_certs": true,
+          "volumes": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "delete_on_termination": true,
+                "volume_size": 10,
+                "volume_type": "gp2"
+              }
+            }
+          ],
+          "vpc_subnet_id": null,
+          "wait": true,
+          "wait_timeout": 600
+        }
+      },
+      "item": 0,
+      "spec": {
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "DeleteOnTermination": true,
+              "VolumeSize": 10,
+              "VolumeType": "gp2"
+            }
+          }
+        ],
+        "ClientToken": "5d78e164ea224a06b6be23f73724901e",
+        "ImageId": "ami-05b308c240ae70bb6",
+        "InstanceType": "i3.2xlarge",
+        "KeyName": "baas_dev",
+        "MaxCount": 1,
+        "MinCount": 1,
+        "NetworkInterfaces": [
+          {
+            "AssociatePublicIpAddress": true,
+            "DeviceIndex": 0,
+            "Groups": [
+              "sg-070a926c34814caba",
+              "sg-094cb4a4651310ea0",
+              "sg-3734875b"
+            ],
+            "SubnetId": "subnet-324f4259"
+          }
+        ],
+        "TagSpecifications": [
+          {
+            "ResourceType": "volume",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-MONGODB-data-0-137f08ac-06df-56f4-a7fc-61f211768769"
+              }
+            ]
+          },
+          {
+            "ResourceType": "instance",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-MONGODB-data-0-137f08ac-06df-56f4-a7fc-61f211768769"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "ansible_loop_var": "item",
+      "changed": true,
+      "failed": false,
+      "instance_ids": [
+        "i-08d6a2e8a793f6b02"
+      ],
+      "instances": [
+        {
+          "ami_launch_index": 0,
+          "architecture": "x86_64",
+          "block_device_mappings": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "attach_time": "2022-02-28T21:21:43+00:00",
+                "delete_on_termination": true,
+                "status": "attached",
+                "volume_id": "vol-0fe2f4ec7917b10f6"
+              }
+            }
+          ],
+          "capacity_reservation_specification": {
+            "capacity_reservation_preference": "open"
+          },
+          "client_token": "ebd402b56f244cd4acc9e2e81b547389",
+          "cpu_options": {
+            "core_count": 4,
+            "threads_per_core": 2
+          },
+          "ebs_optimized": false,
+          "ena_support": true,
+          "enclave_options": {
+            "enabled": false
+          },
+          "hibernation_options": {
+            "configured": false
+          },
+          "hypervisor": "xen",
+          "image_id": "ami-05b308c240ae70bb6",
+          "instance_id": "i-08d6a2e8a793f6b02",
+          "instance_type": "i3.2xlarge",
+          "key_name": "baas_dev",
+          "launch_time": "2022-02-28T21:21:42+00:00",
+          "metadata_options": {
+            "http_endpoint": "enabled",
+            "http_protocol_ipv6": "disabled",
+            "http_put_response_hop_limit": 1,
+            "http_tokens": "optional",
+            "instance_metadata_tags": "disabled",
+            "state": "applied"
+          },
+          "monitoring": {
+            "state": "disabled"
+          },
+          "network_interfaces": [
+            {
+              "association": {
+                "ip_owner_id": "amazon",
+                "public_dns_name": "ec2-3-72-14-171.eu-central-1.compute.amazonaws.com",
+                "public_ip": "3.72.14.171"
+              },
+              "attachment": {
+                "attach_time": "2022-02-28T21:21:42+00:00",
+                "attachment_id": "eni-attach-054f36abf5b14d1af",
+                "delete_on_termination": true,
+                "device_index": 0,
+                "network_card_index": 0,
+                "status": "attached"
+              },
+              "description": "",
+              "groups": [
+                {
+                  "group_id": "sg-3734875b",
+                  "group_name": "default"
+                },
+                {
+                  "group_id": "sg-070a926c34814caba",
+                  "group_name": "baas-dbms"
+                },
+                {
+                  "group_id": "sg-094cb4a4651310ea0",
+                  "group_name": "baas-ssh"
+                }
+              ],
+              "interface_type": "interface",
+              "ipv6_addresses": [],
+              "mac_address": "02:28:24:e6:8d:94",
+              "network_interface_id": "eni-0c5e7c8edd93d9484",
+              "owner_id": "584241909684",
+              "private_dns_name": "ip-172-31-19-87.eu-central-1.compute.internal",
+              "private_ip_address": "172.31.19.87",
+              "private_ip_addresses": [
+                {
+                  "association": {
+                    "ip_owner_id": "amazon",
+                    "public_dns_name": "ec2-3-72-14-171.eu-central-1.compute.amazonaws.com",
+                    "public_ip": "3.72.14.171"
+                  },
+                  "primary": true,
+                  "private_dns_name": "ip-172-31-19-87.eu-central-1.compute.internal",
+                  "private_ip_address": "172.31.19.87"
+                }
+              ],
+              "source_dest_check": true,
+              "status": "in-use",
+              "subnet_id": "subnet-324f4259",
+              "vpc_id": "vpc-d58ed7be"
+            }
+          ],
+          "placement": {
+            "availability_zone": "eu-central-1a",
+            "group_name": "",
+            "tenancy": "default"
+          },
+          "platform_details": "Linux/UNIX",
+          "private_dns_name": "ip-172-31-19-87.eu-central-1.compute.internal",
+          "private_dns_name_options": {
+            "enable_resource_name_dns_a_record": false,
+            "enable_resource_name_dns_aaaa_record": false,
+            "hostname_type": "ip-name"
+          },
+          "private_ip_address": "172.31.19.87",
+          "product_codes": [],
+          "public_dns_name": "ec2-3-72-14-171.eu-central-1.compute.amazonaws.com",
+          "public_ip_address": "3.72.14.171",
+          "root_device_name": "/dev/sda1",
+          "root_device_type": "ebs",
+          "security_groups": [
+            {
+              "group_id": "sg-3734875b",
+              "group_name": "default"
+            },
+            {
+              "group_id": "sg-070a926c34814caba",
+              "group_name": "baas-dbms"
+            },
+            {
+              "group_id": "sg-094cb4a4651310ea0",
+              "group_name": "baas-ssh"
+            }
+          ],
+          "source_dest_check": true,
+          "state": {
+            "code": 16,
+            "name": "running"
+          },
+          "state_transition_reason": "",
+          "subnet_id": "subnet-324f4259",
+          "tags": {
+            "Name": "BaaS-MONGODB-data-1-4acf2459-ccd4-5e1a-b099-b451ca053df7",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "usage_operation": "RunInstances",
+          "usage_operation_update_time": "2022-02-28T21:21:42+00:00",
+          "virtualization_type": "hvm",
+          "vpc_id": "vpc-d58ed7be"
+        }
+      ],
+      "invocation": {
+        "module_args": {
+          "availability_zone": null,
+          "aws_access_key": "AKIAITUSIIVIIVYRSRRQ",
+          "aws_ca_bundle": null,
+          "aws_config": null,
+          "aws_secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+          "cpu_credit_specification": null,
+          "cpu_options": null,
+          "debug_botocore_endpoint_logs": false,
+          "detailed_monitoring": null,
+          "ebs_optimized": null,
+          "ec2_url": null,
+          "filters": {
+            "image-id": [
+              "ami-05b308c240ae70bb6"
+            ],
+            "instance-state-name": [
+              "pending",
+              "running",
+              "stopping",
+              "stopped"
+            ],
+            "tag:Name": [
+              "BaaS-MONGODB-data-1-4acf2459-ccd4-5e1a-b099-b451ca053df7"
+            ]
+          },
+          "image": null,
+          "image_id": "ami-05b308c240ae70bb6",
+          "instance_ids": [],
+          "instance_initiated_shutdown_behavior": null,
+          "instance_role": null,
+          "instance_type": "i3.2xlarge",
+          "key_name": "baas_dev",
+          "launch_template": null,
+          "metadata_options": null,
+          "name": "BaaS-MONGODB-data-1-4acf2459-ccd4-5e1a-b099-b451ca053df7",
+          "network": {
+            "assign_public_ip": true
+          },
+          "placement_group": null,
+          "profile": null,
+          "purge_tags": false,
+          "region": "eu-central-1",
+          "security_group": null,
+          "security_groups": [
+            "default",
+            "baas-ssh",
+            "baas-dbms"
+          ],
+          "security_token": null,
+          "state": "started",
+          "tags": {
+            "Name": "BaaS-MONGODB-data-1-4acf2459-ccd4-5e1a-b099-b451ca053df7",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "tenancy": null,
+          "termination_protection": null,
+          "tower_callback": null,
+          "user_data": null,
+          "validate_certs": true,
+          "volumes": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "delete_on_termination": true,
+                "volume_size": 10,
+                "volume_type": "gp2"
+              }
+            }
+          ],
+          "vpc_subnet_id": null,
+          "wait": true,
+          "wait_timeout": 600
+        }
+      },
+      "item": 1,
+      "spec": {
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "DeleteOnTermination": true,
+              "VolumeSize": 10,
+              "VolumeType": "gp2"
+            }
+          }
+        ],
+        "ClientToken": "ebd402b56f244cd4acc9e2e81b547389",
+        "ImageId": "ami-05b308c240ae70bb6",
+        "InstanceType": "i3.2xlarge",
+        "KeyName": "baas_dev",
+        "MaxCount": 1,
+        "MinCount": 1,
+        "NetworkInterfaces": [
+          {
+            "AssociatePublicIpAddress": true,
+            "DeviceIndex": 0,
+            "Groups": [
+              "sg-070a926c34814caba",
+              "sg-094cb4a4651310ea0",
+              "sg-3734875b"
+            ],
+            "SubnetId": "subnet-324f4259"
+          }
+        ],
+        "TagSpecifications": [
+          {
+            "ResourceType": "volume",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-MONGODB-data-1-4acf2459-ccd4-5e1a-b099-b451ca053df7"
+              }
+            ]
+          },
+          {
+            "ResourceType": "instance",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-MONGODB-data-1-4acf2459-ccd4-5e1a-b099-b451ca053df7"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "ansible_loop_var": "item",
+      "changed": true,
+      "failed": false,
+      "instance_ids": [
+        "i-023fa02ca03a16c60"
+      ],
+      "instances": [
+        {
+          "ami_launch_index": 0,
+          "architecture": "x86_64",
+          "block_device_mappings": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "attach_time": "2022-02-28T21:23:32+00:00",
+                "delete_on_termination": true,
+                "status": "attached",
+                "volume_id": "vol-0ea37c329780ad084"
+              }
+            }
+          ],
+          "capacity_reservation_specification": {
+            "capacity_reservation_preference": "open"
+          },
+          "client_token": "fc20d98049da45c3939e0c260f54b48c",
+          "cpu_options": {
+            "core_count": 4,
+            "threads_per_core": 2
+          },
+          "ebs_optimized": false,
+          "ena_support": true,
+          "enclave_options": {
+            "enabled": false
+          },
+          "hibernation_options": {
+            "configured": false
+          },
+          "hypervisor": "xen",
+          "image_id": "ami-05b308c240ae70bb6",
+          "instance_id": "i-023fa02ca03a16c60",
+          "instance_type": "i3.2xlarge",
+          "key_name": "baas_dev",
+          "launch_time": "2022-02-28T21:23:31+00:00",
+          "metadata_options": {
+            "http_endpoint": "enabled",
+            "http_protocol_ipv6": "disabled",
+            "http_put_response_hop_limit": 1,
+            "http_tokens": "optional",
+            "instance_metadata_tags": "disabled",
+            "state": "applied"
+          },
+          "monitoring": {
+            "state": "disabled"
+          },
+          "network_interfaces": [
+            {
+              "association": {
+                "ip_owner_id": "amazon",
+                "public_dns_name": "ec2-18-156-129-59.eu-central-1.compute.amazonaws.com",
+                "public_ip": "18.156.129.59"
+              },
+              "attachment": {
+                "attach_time": "2022-02-28T21:23:31+00:00",
+                "attachment_id": "eni-attach-01537e93e3980edef",
+                "delete_on_termination": true,
+                "device_index": 0,
+                "network_card_index": 0,
+                "status": "attached"
+              },
+              "description": "",
+              "groups": [
+                {
+                  "group_id": "sg-3734875b",
+                  "group_name": "default"
+                },
+                {
+                  "group_id": "sg-070a926c34814caba",
+                  "group_name": "baas-dbms"
+                },
+                {
+                  "group_id": "sg-094cb4a4651310ea0",
+                  "group_name": "baas-ssh"
+                }
+              ],
+              "interface_type": "interface",
+              "ipv6_addresses": [],
+              "mac_address": "02:9f:58:81:d2:6c",
+              "network_interface_id": "eni-06ba54fc2c6e1cb36",
+              "owner_id": "584241909684",
+              "private_dns_name": "ip-172-31-17-100.eu-central-1.compute.internal",
+              "private_ip_address": "172.31.17.100",
+              "private_ip_addresses": [
+                {
+                  "association": {
+                    "ip_owner_id": "amazon",
+                    "public_dns_name": "ec2-18-156-129-59.eu-central-1.compute.amazonaws.com",
+                    "public_ip": "18.156.129.59"
+                  },
+                  "primary": true,
+                  "private_dns_name": "ip-172-31-17-100.eu-central-1.compute.internal",
+                  "private_ip_address": "172.31.17.100"
+                }
+              ],
+              "source_dest_check": true,
+              "status": "in-use",
+              "subnet_id": "subnet-324f4259",
+              "vpc_id": "vpc-d58ed7be"
+            }
+          ],
+          "placement": {
+            "availability_zone": "eu-central-1a",
+            "group_name": "",
+            "tenancy": "default"
+          },
+          "platform_details": "Linux/UNIX",
+          "private_dns_name": "ip-172-31-17-100.eu-central-1.compute.internal",
+          "private_dns_name_options": {
+            "enable_resource_name_dns_a_record": false,
+            "enable_resource_name_dns_aaaa_record": false,
+            "hostname_type": "ip-name"
+          },
+          "private_ip_address": "172.31.17.100",
+          "product_codes": [],
+          "public_dns_name": "ec2-18-156-129-59.eu-central-1.compute.amazonaws.com",
+          "public_ip_address": "18.156.129.59",
+          "root_device_name": "/dev/sda1",
+          "root_device_type": "ebs",
+          "security_groups": [
+            {
+              "group_id": "sg-3734875b",
+              "group_name": "default"
+            },
+            {
+              "group_id": "sg-070a926c34814caba",
+              "group_name": "baas-dbms"
+            },
+            {
+              "group_id": "sg-094cb4a4651310ea0",
+              "group_name": "baas-ssh"
+            }
+          ],
+          "source_dest_check": true,
+          "state": {
+            "code": 16,
+            "name": "running"
+          },
+          "state_transition_reason": "",
+          "subnet_id": "subnet-324f4259",
+          "tags": {
+            "Name": "BaaS-MONGODB-data-2-44989a55-a371-581e-b7d4-eede8346dd25",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "usage_operation": "RunInstances",
+          "usage_operation_update_time": "2022-02-28T21:23:31+00:00",
+          "virtualization_type": "hvm",
+          "vpc_id": "vpc-d58ed7be"
+        }
+      ],
+      "invocation": {
+        "module_args": {
+          "availability_zone": null,
+          "aws_access_key": "AKIAITUSIIVIIVYRSRRQ",
+          "aws_ca_bundle": null,
+          "aws_config": null,
+          "aws_secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+          "cpu_credit_specification": null,
+          "cpu_options": null,
+          "debug_botocore_endpoint_logs": false,
+          "detailed_monitoring": null,
+          "ebs_optimized": null,
+          "ec2_url": null,
+          "filters": {
+            "image-id": [
+              "ami-05b308c240ae70bb6"
+            ],
+            "instance-state-name": [
+              "pending",
+              "running",
+              "stopping",
+              "stopped"
+            ],
+            "tag:Name": [
+              "BaaS-MONGODB-data-2-44989a55-a371-581e-b7d4-eede8346dd25"
+            ]
+          },
+          "image": null,
+          "image_id": "ami-05b308c240ae70bb6",
+          "instance_ids": [],
+          "instance_initiated_shutdown_behavior": null,
+          "instance_role": null,
+          "instance_type": "i3.2xlarge",
+          "key_name": "baas_dev",
+          "launch_template": null,
+          "metadata_options": null,
+          "name": "BaaS-MONGODB-data-2-44989a55-a371-581e-b7d4-eede8346dd25",
+          "network": {
+            "assign_public_ip": true
+          },
+          "placement_group": null,
+          "profile": null,
+          "purge_tags": false,
+          "region": "eu-central-1",
+          "security_group": null,
+          "security_groups": [
+            "default",
+            "baas-ssh",
+            "baas-dbms"
+          ],
+          "security_token": null,
+          "state": "started",
+          "tags": {
+            "Name": "BaaS-MONGODB-data-2-44989a55-a371-581e-b7d4-eede8346dd25",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "tenancy": null,
+          "termination_protection": null,
+          "tower_callback": null,
+          "user_data": null,
+          "validate_certs": true,
+          "volumes": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "delete_on_termination": true,
+                "volume_size": 10,
+                "volume_type": "gp2"
+              }
+            }
+          ],
+          "vpc_subnet_id": null,
+          "wait": true,
+          "wait_timeout": 600
+        }
+      },
+      "item": 2,
+      "spec": {
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "DeleteOnTermination": true,
+              "VolumeSize": 10,
+              "VolumeType": "gp2"
+            }
+          }
+        ],
+        "ClientToken": "fc20d98049da45c3939e0c260f54b48c",
+        "ImageId": "ami-05b308c240ae70bb6",
+        "InstanceType": "i3.2xlarge",
+        "KeyName": "baas_dev",
+        "MaxCount": 1,
+        "MinCount": 1,
+        "NetworkInterfaces": [
+          {
+            "AssociatePublicIpAddress": true,
+            "DeviceIndex": 0,
+            "Groups": [
+              "sg-070a926c34814caba",
+              "sg-094cb4a4651310ea0",
+              "sg-3734875b"
+            ],
+            "SubnetId": "subnet-324f4259"
+          }
+        ],
+        "TagSpecifications": [
+          {
+            "ResourceType": "volume",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-MONGODB-data-2-44989a55-a371-581e-b7d4-eede8346dd25"
+              }
+            ]
+          },
+          {
+            "ResourceType": "instance",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-MONGODB-data-2-44989a55-a371-581e-b7d4-eede8346dd25"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

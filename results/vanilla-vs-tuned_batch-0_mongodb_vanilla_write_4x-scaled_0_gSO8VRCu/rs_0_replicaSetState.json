@@ -1,0 +1,146 @@
+MongoDB shell version v4.4.6
+connecting to: mongodb://172.31.22.55:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("945f1f72-bd0b-4325-9e4b-366282a3d6cf") }
+MongoDB server version: 4.4.6
+{
+	"set" : "rs0",
+	"date" : ISODate("2022-02-28T15:00:18.406Z"),
+	"myState" : 1,
+	"term" : NumberLong(1),
+	"syncSourceHost" : "",
+	"syncSourceId" : -1,
+	"heartbeatIntervalMillis" : NumberLong(2000),
+	"majorityVoteCount" : 2,
+	"writeMajorityCount" : 2,
+	"votingMembersCount" : 3,
+	"writableVotingMembersCount" : 3,
+	"optimes" : {
+		"lastCommittedOpTime" : {
+			"ts" : Timestamp(1646060412, 1),
+			"t" : NumberLong(1)
+		},
+		"lastCommittedWallTime" : ISODate("2022-02-28T15:00:12.430Z"),
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1646060412, 1),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityWallTime" : ISODate("2022-02-28T15:00:12.430Z"),
+		"appliedOpTime" : {
+			"ts" : Timestamp(1646060412, 1),
+			"t" : NumberLong(1)
+		},
+		"durableOpTime" : {
+			"ts" : Timestamp(1646060412, 1),
+			"t" : NumberLong(1)
+		},
+		"lastAppliedWallTime" : ISODate("2022-02-28T15:00:12.430Z"),
+		"lastDurableWallTime" : ISODate("2022-02-28T15:00:12.430Z")
+	},
+	"lastStableRecoveryTimestamp" : Timestamp(1646060411, 3),
+	"electionCandidateMetrics" : {
+		"lastElectionReason" : "electionTimeout",
+		"lastElectionDate" : ISODate("2022-02-28T15:00:11.150Z"),
+		"electionTerm" : NumberLong(1),
+		"lastCommittedOpTimeAtElection" : {
+			"ts" : Timestamp(0, 0),
+			"t" : NumberLong(-1)
+		},
+		"lastSeenOpTimeAtElection" : {
+			"ts" : Timestamp(1646060399, 1),
+			"t" : NumberLong(-1)
+		},
+		"numVotesNeeded" : 2,
+		"priorityAtElection" : 1,
+		"electionTimeoutMillis" : NumberLong(10000),
+		"numCatchUpOps" : NumberLong(0),
+		"newTermStartDate" : ISODate("2022-02-28T15:00:11.160Z"),
+		"wMajorityWriteAvailabilityDate" : ISODate("2022-02-28T15:00:12.419Z")
+	},
+	"members" : [
+		{
+			"_id" : 0,
+			"name" : "172.31.31.242:27017",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 18,
+			"optime" : {
+				"ts" : Timestamp(1646060412, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDurable" : {
+				"ts" : Timestamp(1646060412, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2022-02-28T15:00:12Z"),
+			"optimeDurableDate" : ISODate("2022-02-28T15:00:12Z"),
+			"lastHeartbeat" : ISODate("2022-02-28T15:00:17.154Z"),
+			"lastHeartbeatRecv" : ISODate("2022-02-28T15:00:16.658Z"),
+			"pingMs" : NumberLong(0),
+			"lastHeartbeatMessage" : "",
+			"syncSourceHost" : "172.31.22.55:27017",
+			"syncSourceId" : 2,
+			"infoMessage" : "",
+			"configVersion" : 1,
+			"configTerm" : 1
+		},
+		{
+			"_id" : 1,
+			"name" : "172.31.17.11:27017",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 18,
+			"optime" : {
+				"ts" : Timestamp(1646060412, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDurable" : {
+				"ts" : Timestamp(1646060412, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2022-02-28T15:00:12Z"),
+			"optimeDurableDate" : ISODate("2022-02-28T15:00:12Z"),
+			"lastHeartbeat" : ISODate("2022-02-28T15:00:17.154Z"),
+			"lastHeartbeatRecv" : ISODate("2022-02-28T15:00:16.659Z"),
+			"pingMs" : NumberLong(0),
+			"lastHeartbeatMessage" : "",
+			"syncSourceHost" : "172.31.22.55:27017",
+			"syncSourceId" : 2,
+			"infoMessage" : "",
+			"configVersion" : 1,
+			"configTerm" : 1
+		},
+		{
+			"_id" : 2,
+			"name" : "172.31.22.55:27017",
+			"health" : 1,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 36,
+			"optime" : {
+				"ts" : Timestamp(1646060412, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2022-02-28T15:00:12Z"),
+			"syncSourceHost" : "",
+			"syncSourceId" : -1,
+			"infoMessage" : "Could not find member to sync from",
+			"electionTime" : Timestamp(1646060411, 1),
+			"electionDate" : ISODate("2022-02-28T15:00:11Z"),
+			"configVersion" : 1,
+			"configTerm" : 1,
+			"self" : true,
+			"lastHeartbeatMessage" : ""
+		}
+	],
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1646060412, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1646060412, 1)
+}

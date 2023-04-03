@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "userId": "benchANT",
+    "projectId": "vanilla-vs-tuned",
+    "batchId": "batch-0",
+    "configurationId": "mongodb_vanilla_balanced_2x-scaled",
+    "configurationLabel": "mongodb_vanilla_balanced_2x-scaled",
+    "executions": 3,
+    "executionCounter": 3
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "MONGODB",
+    "operationType": "DBMS",
+    "version": "4.4.6",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 3,
+        "resource": {
+          "costs": {
+            "storageCosts": 0.035,
+            "vmCosts": 0.67
+          },
+          "ec2Vm": {
+            "regionName": "eu-central-1",
+            "instanceType": "i3.2xlarge",
+            "architecture": "x86_64",
+            "imageDistribution": "ubuntu",
+            "imageVersion": "20.04",
+            "volumeType": "GP2",
+            "volumeSize": 10,
+            "iops": 100
+          }
+        },
+        "replicationFactor": 3,
+        "mongodbConfiguration": {
+          "mongodbServerConfiguration": {
+            "sharding": false
+          },
+          "mongodbClientConfiguration": {
+            "writeConcern": {
+              "w": "1",
+              "j": true
+            },
+            "readPreference": "PRIMARY"
+          }
+        }
+      }
+    }
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-central-1",
+          "instanceType": "c5.4xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "20.04",
+          "volumeType": "GP2",
+          "volumeSize": 30,
+          "iops": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "YCSB-balanced-200",
+    "distribution": "YCSB",
+    "version": "0.17.0",
+    "dbmsBenchmark": {
+      "executeLoadPhase": true,
+      "executeRunPhase": true,
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 200,
+        "recordCount": 40000000,
+        "insertStart": 40000001,
+        "insertCount": 0,
+        "operations": 90000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 50,
+        "readAllFileds": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.5,
+        "updateProportion": 0.0,
+        "insertProportion": 0.5,
+        "scanProportion": 0.0,
+        "maxScanLength": 0,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3
+      }
+    }
+  }
+}
